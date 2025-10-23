@@ -9,7 +9,7 @@ fun main() {
 
     val doc: Document = Jsoup.connect(siteURL).get()
 
-    val quotes: Elements = doc.select("article div div div")
+    val quotes: Elements = doc.select("article")
 
     for (quote: Element in quotes) {
         println("${quote.text()}\n")
